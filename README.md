@@ -41,11 +41,11 @@ To run the simulation, execute the main script:
 ```
 
 This will:
-    - Simulate 500 customers
-    - Save results to `data/simulation_results.csv`
-    - Generate visualizations in the `plots/` directory:
-        - `waiting_times.png`
-        - `queue_length_over_time.png`
+   - Simulate 500 customers
+   - Save results to `data/simulation_results.csv`
+   - Generate visualizations in the `plots/` directory:
+      - `waiting_times.png`
+      - `queue_length_over_time.png`
 
 ## Project Structure
 
