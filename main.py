@@ -3,6 +3,7 @@ from bank_simulation.metrics import create_results_dataframe, save_results_to_cs
 from bank_simulation.visualization import (
     plot_waiting_times, 
     plot_system_times,
+    plot_metrics_summary,
     # plot_service_vs_waiting,
     plot_histogram_waiting_times,
     plot_queue_length_over_time
@@ -31,6 +32,7 @@ def main():
     plot_waiting_times(df)
     plot_system_times(df)
     # plot_service_vs_waiting(df)
+    plot_metrics_summary(metrics)
     plot_histogram_waiting_times(df)
     plot_queue_length_over_time(df)
 
