@@ -25,7 +25,7 @@ This project simulates customer arrivals and service times at a bank counter wit
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/bank_simulation.git
+   git clone https://github.com/wlagho/bank_simulation.git
 2. Install dependencies:
 
     ```bash
