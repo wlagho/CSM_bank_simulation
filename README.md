@@ -20,7 +20,7 @@ This project simulates customer arrivals and service times at a bank counter wit
 | Server Utilization      | 78%                          |
 | Average Queue Length    | 0.01 customers               |
 
-## 🛠️ Installation
+## Installation
 
 1. Clone the repository:
 
@@ -63,45 +63,53 @@ This will:
 
 ## Understanding the Outputs
 
-### Service Time vs Waiting Time
+### Key Metrics Summary
 
-        ![Service vs Waiting Time](https://plots/service_vs_waiting.png)
+![Metrics Bar Graph](plots/metrics_summary.png)
 
-        - **X-axis:** Service time (how long the transaction takes)
-        - **Y-axis:** Waiting time (time spent in queue)
-        - **Key Insight:** Waiting time depends on queue congestion, not just service time.
+- **What it shows**:
+  - Average vs. maximum waiting times
+  - Total system time (wait + service)
+  - Server utilization percentage
+- **Key Insights**:
+  - High server utilization (78%) explains queue formation
+  - Large gap between average (1.89 min) and max wait (15.2 min) shows impact of random arrival bursts
 
-        ### Queue Length Over Time
+### Queue Length Over Time
 
-        ![Queue Length Over Time](https://plots/queue_length_over_time.png)
+![Queue Length Over Time](plots/queue_length_over_time.png)
 
-        - Shows how customer backlog varies during the simulation.
+- **X-axis**: Simulation time (minutes)
+- **Y-axis**: Number of customers in queue
+- **Key Patterns**:
+  - Peak congestion periods (e.g., when queue length spikes to 5)
+  - How quickly the queue clears after busy periods
 
-        ## 🧪 Testing
+## Testing
 
-        Run unit tests with:
+Run unit tests with:
 
-        ```bash
-        python -m unittest tests/test_simulation.py
-        ```
+```bash
+    python -m unittest tests/test_simulation.py
+```
 
-        ## ⚙️ Customization
+## Customization
 
-        Modify parameters in `simulation.py`:
+Modify parameters in `simulation.py`:
 
-        ```python
-        # Change simulation parameters
-        simulation = BankSimulation(
-            num_customers=1000,        # Simulate more/fewer customers
-            interarrival_range=(1,10), # Wider arrival window
-            service_range=(1,8)        # Longer possible service times
-        )
-        ```
+```python
+    # Change simulation parameters
+    simulation = BankSimulation(
+        num_customers=1000,        # Simulate more/fewer customers
+        interarrival_range=(1,10), # Wider arrival window
+        service_range=(1,8)        # Longer possible service times
+    )
+```
 
-        ## 🤝 Contributing
+## Contributing
 
-        Pull requests are welcome! For major changes, please open an issue first.
+Pull requests are welcome! For major changes, please open an issue first.
 
-        ## 📄 License
+## 📄 License
 
-        MIT
+MIT
